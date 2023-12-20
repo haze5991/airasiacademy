@@ -10,3 +10,6 @@ if show:
         'Students': ['John', 'Lofa', 'Siti', 'Amy'],
         'Attendance Status': ['yes', 'yes', 'yes', 'no']
     }))
+    option = st.sidebar.selectbox(
+        'Select a mini project',
+         ['line chart','map','T n C'])

@@ -25,7 +25,7 @@ df = user_input_features()
 st.subheader('User Input parameters')
 st.write(df)
 
-loaded_model = pickle.load(open("IrisGaussianNaiveBayes.h", "rb"))
+loaded_model = pickle.load(open("IrisGaussianNaiveBayes.h5", "rb"))
 prediction = loaded_model.predict(df)
 prediction_proba = loaded_model.predict_proba(df) # shows the probability
 

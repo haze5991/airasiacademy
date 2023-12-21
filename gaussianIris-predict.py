@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import seaborn as sns
 from sklearn.naive_bayes import GaussianNB
+import pickle
 
 st.write("# GaussianNB Iris Flower Prediction App")
 st.write("This app predicts the **Iris flower** type!")
@@ -29,10 +30,10 @@ data = sns.load_dataset('iris')
 X = data.drop(['species'],axis=1) # except species
 Y = data.species.copy()
 
-modelGaussianIris = GaussianNB(IrisGaussianNaiveBayes.h5)
+modelGaussianIris = GaussianNB()
 
-prediction = modelGaussianIris.predict(df)
-prediction_proba = modelGaussianIris.predict_proba(df) # shows the probability
+prediction = loaded_model.predict(df)
+prediction_proba = loaded_model.predict_proba(df) # shows the probability
 
 st.subheader('Class labels and their corresponding index number')
 st.write(Y.unique())

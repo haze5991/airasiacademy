@@ -30,7 +30,7 @@ prediction = loaded_model.predict(df)
 prediction_proba = loaded_model.predict_proba(df) # shows the probability
 
 st.subheader('Class labels and their corresponding index number')
-st.write(Y.unique())
+#st.write(Y.unique())
 
 st.subheader('Prediction')
 st.write(prediction)

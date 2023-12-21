@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import seaborn as sns
-from sklearn.naive_bayes import GaussianNB
 import pickle
 
 st.write("# GaussianNB Iris Flower Prediction App")
@@ -25,8 +24,6 @@ df = user_input_features()
 
 st.subheader('User Input parameters')
 st.write(df)
-
-modelGaussianIris = GaussianNB()
 
 loaded_model = pickle.load(open("IrisGaussianNaiveBayes.h", "rb"))
 prediction = loaded_model.predict(df)

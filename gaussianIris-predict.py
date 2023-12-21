@@ -26,10 +26,6 @@ df = user_input_features()
 st.subheader('User Input parameters')
 st.write(df)
 
-data = sns.load_dataset('iris')
-X = data.drop(['species'],axis=1) # except species
-Y = data.species.copy()
-
 modelGaussianIris = GaussianNB()
 
 prediction = loaded_model.predict(df)

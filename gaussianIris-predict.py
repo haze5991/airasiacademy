@@ -28,6 +28,7 @@ st.write(df)
 
 modelGaussianIris = GaussianNB()
 
+loaded_model = pickle.load(open("IrisGaussianNaiveBayes.h", "rb"))
 prediction = loaded_model.predict(df)
 prediction_proba = loaded_model.predict_proba(df) # shows the probability
 
